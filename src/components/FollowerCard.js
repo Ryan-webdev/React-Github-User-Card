@@ -24,14 +24,7 @@ class FollowerCard extends React.Component {
                         <CardContent className='user-info'>
 
                             <Typography variant="body2" color="textSecondary" component="p">
-                                <b>GitHub Page:</b> {follower.html_url}
-
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                <b>Followers:</b> {follower.followers}
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                <b>Following:</b> {follower.following}
+                                <b><a href={follower.html_url}>GitHub Page</a></b> 
 
                             </Typography>
                         </CardContent>

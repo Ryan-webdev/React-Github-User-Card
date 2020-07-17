@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
 import UserCard from './components/UserCard'
@@ -9,6 +8,7 @@ class App extends React.Component {
 
   constructor() {
     super();
+    //setting state for userData and followers
     this.state = {
       userData: {},
       followers: [],
@@ -17,6 +17,7 @@ class App extends React.Component {
 
   componentDidMount(){
     console.log('Mount is running')
+    //axios call to the api to get my userdata
     axios
     .get(`https://api.github.com/users/ryan-webdev`)
     .then(res => {
@@ -24,7 +25,7 @@ class App extends React.Component {
       this.setState({userData: res.data})
     })
     .catch(err => console.log('something went wrong', err))
-
+    //axios call to get my followers data
     axios
     .get(`https://api.github.com/users/Ryan-webdev/followers`)
     .then(res => {

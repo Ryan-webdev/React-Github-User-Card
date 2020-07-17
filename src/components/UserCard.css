@@ -5,11 +5,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
+    margin-bottom: 1%;
 }
 
 .profile-pic {
-    margin-left: 29%;
+    
     max-width: 10vw;
     border-radius: 30%;
 }
@@ -25,6 +25,4 @@
 .follower-pic{
     border-radius: 30%;
     max-width: 10vw;
-    margin-left: 10%;
-    margin-right: 10%;
 }
